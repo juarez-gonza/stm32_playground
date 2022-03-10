@@ -1,0 +1,29 @@
+# toolchain compilacion
+cmake
+
+gnu make
+
+gcc-arm-none-eabi
+
+# analisis estatico
+CodeChecker (https://codechecker.readthedocs.io/en/latest/)
+
+clang, clang-format, clang-tidy, clang static analyzer (Clang y  clang-tools-extra en https://releases.llvm.org/download.html)
+
+# flash
+st-link (https://github.com/stlink-org/stlink)
+  - st-flash
+  - stlink-gui
+
+STM32CubeProgrammer (https://www.st.com/en/development-tools/stm32cubeprog.html#overview)
+
+# generacion de proyecto inicial (HAL, BSP, startup scripts), pinout, configuración del clock y del proyecto
+STM32CubeMX (https://www.st.com/en/development-tools/stm32cubemx.html)
+
+# Debug
+st-link (https://github.com/stlink-org/stlink)
+  - st-util (GDB Server)
+  - st-trace
+  - stlink-gui
+
+STM32CubeProgrammer (https://www.st.com/en/development-tools/stm32cubeprog.html#overview)
