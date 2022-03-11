@@ -1,6 +1,6 @@
 .PHONY: all build cmake clean flash
 
-BUILD_DIR := .\build
+BUILD_DIR := build
 BUILD_TYPE ?= Debug
 
 PROJECT_NAME := CubeCM
