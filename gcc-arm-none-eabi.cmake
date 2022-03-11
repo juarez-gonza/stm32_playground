@@ -1,9 +1,11 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR ARM)
 
-if(MINGW OR CYGWIN OR WIND32)
-  set(UTIL_SEARCH_CMD where)
+if(MINGW OR CYGWIN OR WIN32)
+  message("Detected Windows")
+  set(UTIL_SEARCH_CMD where.exe)
 elseif(UNIX OR APPLE)
+	message("Detected Unix")
   set(UTIL_SEARCH_CMD which)
 endif()
 
