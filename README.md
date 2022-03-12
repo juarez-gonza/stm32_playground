@@ -66,26 +66,20 @@ openocd (this is very much documented as is widely used in the embedded world)
 # WINDOWS DEPENDENCY DOWNLOADS
 
 chocolatey package manager (Install instructions: https://www.youtube.com/watch?v=-5WLKu_J_AE).
-Next list is a list of packages that can be installed with chocolatey
+Next list is a list of packages that can be installed with chocolatey:
 	- git (https://community.chocolatey.org/packages/git.install)
-
 	- mingw (https://community.chocolatey.org/packages/mingw)
-
 	- gcc-arm-embedded (https://community.chocolatey.org/packages/gcc-arm-embedded)
-
 	- cmake (https://community.chocolatey.org/packages/cmake/3.22.1).
 		NOTE: if on chocolatey: remember to add to path when installing
-		example command:  choco install cmake --version 3.22.1 --installargs 'ADD_CMAKE_TO_PATH=System'
-
+		example command:  `choco install cmake --version 3.22.1 --installargs 'ADD_CMAKE_TO_PATH=System'`
 	- GNU make (https://community.chocolatey.org/packages/make)
-
 	- Clang and tools (https://community.chocolatey.org/packages/llvm)
-
   - python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)
 
 st-link tools (download windows x86_64 - doubt you have a 32bit machine- from https://github.com/stlink-org/stlink/releases/tag/v1.7.0)
 
-codechecker (pip3 install codechecker)
+codechecker `pip3 install codechecker`
 	NOTE:
 		- might need to run the command as root
 		- might need to install microsoft visual c++ 14.0 or higher if you don't already have it. For that you may install
