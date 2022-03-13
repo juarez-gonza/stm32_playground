@@ -80,23 +80,25 @@ set(CUBEMX_INCLUDE_DIRS
 
 ### Executable
 
-add_executable(${PROJECT_NAME}
+set(EXECUTABLE ${PROJECT_NAME}.elf)
+
+add_executable(${EXECUTABLE}
   ${STARTUP_SCRIPT}
   ${STM32CUBEMX_SOURCES}
   ${PROJECT_SOURCES}
 )
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE
+target_compile_definitions(${EXECUTABLE} PRIVATE
   -DUSE_HAL_DRIVER
   -D${MCU_MODEL}
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE
+target_include_directories(${EXECUTABLE} PRIVATE
   ${CUBEMX_INCLUDE_DIRS}
   ${PROJECT_INCLUDE_DIRS}
 )
 
-target_compile_options(${PROJECT_NAME} PRIVATE
+target_compile_options(${EXECUTABLE} PRIVATE
   ${MCU_FLAGS}
 
   -fdata-sections
@@ -109,7 +111,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
   $<$<CONFIG:Debug>:-Og -g3>
 )
 
-target_link_options(${PROJECT_NAME} PRIVATE
+target_link_options(${EXECUTABLE} PRIVATE
   -T${LINKER_SCRIPT}
   ${MCU_FLAGS}
 
@@ -132,13 +134,16 @@ target_link_options(${PROJECT_NAME} PRIVATE
   -Wl,--print-memory-usage
 )
 
-add_custom_command(TARGET ${PROJECT_NAME}
+add_custom_command(TARGET ${EXECUTABLE}
   POST_BUILD
-  COMMAND ${CMAKE_SIZE_UTIL} ${PROJECT_NAME}
+  COMMAND ${CMAKE_SIZE_UTIL} ${EXECUTABLE}
 )
 
-add_custom_command(TARGET ${PROJECT_NAME}
+string(REPLACE ".elf" ".bin" BIN_EXECUTABLE ${EXECUTABLE})
+string(REPLACE ".elf" ".hex" HEX_EXECUTABLE ${EXECUTABLE})
+
+add_custom_command(TARGET ${EXECUTABLE}
   POST_BUILD
-  COMMAND ${CMAKE_OBJCOPY} -O ihex ${PROJECT_NAME} ${PROJECT_NAME}.hex
-  COMMAND ${CMAKE_OBJCOPY} -O binary ${PROJECT_NAME} ${PROJECT_NAME}.bin
+  COMMAND ${CMAKE_OBJCOPY} -O ihex ${EXECUTABLE} ${HEX_EXECUTABLE}
+  COMMAND ${CMAKE_OBJCOPY} -O binary ${EXECUTABLE} ${BIN_EXECUTABLE}
 )
