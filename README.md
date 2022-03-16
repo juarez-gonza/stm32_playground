@@ -71,6 +71,10 @@ openocd (this is very much documented as is widely used in the embedded world)
 
 # WINDOWS DEPENDENCY DOWNLOADS
 
+Some commands can be installed via chocolatey, some others cannot. Particularly, the static analysis tool requires python3
+package manager "pip", and st-link tools for flashing and debugging are installed following a wizard (gandalf?).
+As of today (16/03/2022-2:05AM) installing only the chocolatey packages is enough for compiling your code (and a bit more).
+
 ## chocolatey package manager
 (Instructions for Chocolatey Installation: https://www.youtube.com/watch?v=-5WLKu_J_AE).  
 installations can be done manually via the links provided on each item (please read the NOTE,
@@ -107,8 +111,8 @@ to recognize if a program exists or not, and install it via chocolatey if not fo
 			check installation command: python --version  
 
 
-As remarked previously, this can be installed manually with the links. Or open a powershell, position yourself at the root
-of this repository (where this README.md lies) and run the following commands:
+As remarked previously, this can be installed manually with the links. Or open a powershell AS ADMIN (need admin permission to install),
+position yourself at the root of this repository (where this README.md lies) and run the following commands:
 ```
 set-executionpolicy remotesigned
 .\install_script.ps1
