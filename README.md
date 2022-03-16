@@ -87,31 +87,31 @@ to recognize if a program exists or not, and install it via chocolatey if not fo
 ### PROGRAM LIST: CHOCOLATEY  
 
 
-* git (https://community.chocolatey.org/packages/git.install)
-			check installation command: git --version
+* git (https://community.chocolatey.org/packages/git.install)  
+	check installation command: git --version
 
-* mingw (https://community.chocolatey.org/packages/mingw)
+* mingw (https://community.chocolatey.org/packages/mingw)  
 	check installation command: gcc.exe --version
 
-* gcc-arm-embedded (https://community.chocolatey.org/packages/gcc-arm-embedded)
+* gcc-arm-embedded (https://community.chocolatey.org/packages/gcc-arm-embedded)  
 	check installation command: arm-none-eabi-gcc.exe --version
 
-* cmake (https://community.chocolatey.org/packages/cmake/3.22.1).
-	check installation command: cmake --version
+* cmake (https://community.chocolatey.org/packages/cmake/3.22.1)  
+	check installation command: cmake --version  
 	NOTE: if on chocolatey: remember to add to path when installing
 	example command:  `choco install cmake --version 3.22.1 --installargs 'ADD_CMAKE_TO_PATH=System'`
 
-* GNU make (https://community.chocolatey.org/packages/make)
+* GNU make (https://community.chocolatey.org/packages/make)  
 	check installation command: make --version
 
-* Clang and tools (https://community.chocolatey.org/packages/llvm).
+* Clang and tools (https://community.chocolatey.org/packages/llvm).  
 	check installation command: clangd --version
 
-* python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)
-			check installation command: python --version  
+* python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)  
+	check installation command: python --version  
 
 
-As remarked previously, this can be installed manually with the links. Or open a powershell AS ADMIN (need admin permission to install),
+The previous stuff can be installed manually with the links. Or open a powershell AS ADMIN (need admin permission to install),
 position yourself at the root of this repository (where this README.md lies) and run the following commands:
 ```
 set-executionpolicy remotesigned
