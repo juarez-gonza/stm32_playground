@@ -117,6 +117,9 @@ position yourself at the root of this repository (where this README.md lies) and
 set-executionpolicy remotesigned
 .\install_script.ps1
 ```
+NOTE: if you think you already have some of the packages mentioned in the list installed, run the "check installation command".
+NOTE2: if you want the script to stop before installing each package to ask you if you want the package (or not). Edit install_script.ps1
+on the line that says `choco install ... -y`, delete the "-y" (leaving `choco instal ...`).
 
 ### PROGRAM LIST: OUT OF CHOCOLATEY
 
