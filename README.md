@@ -1,8 +1,12 @@
 # CLI Usage
 
+Windows: USE POWERSHELL (not cmd)  
+Linux: There are no shell commands out of Makefiles at the moment but there is an attempt to keep it
+POSIX compliant (i.e.: no bashisms or whatever zsh-isms are called)  
+
 ## Compilation
 
-Install the software listed in .software.list  
+After installing the necessary software
 Poistion yourself at the root directory of this repository and run `make build`
 
 ### alternative
@@ -13,8 +17,8 @@ Poistion yourself at the root directory of this repository and run `make build`
 
 Install the software listed in .software.list under static analysis
 
-Run at least `make cmake` (running just `make` and `make build` also run `make cmake` for you)  
-Then, if positioned at the root directory of this repository:  
+Run at least `make cmake` (running just `make` and `make build` also run `make cmake` for you)
+Then, if positioned at the root directory of this repository:
 run `CodeChecker analyze build/compile_commands.json -o reports/`
 
 ## Flashing
@@ -67,8 +71,16 @@ openocd (this is very much documented as is widely used in the embedded world)
 
 # WINDOWS DEPENDENCY DOWNLOADS
 
-* chocolatey package manager (Install instructions: https://www.youtube.com/watch?v=-5WLKu_J_AE).
-Next list is a list of packages that can be installed with chocolatey:
+## chocolatey package manager
+(Instructions for Chocolatey Installation: https://www.youtube.com/watch?v=-5WLKu_J_AE).  
+installations can be done manually via the links provided on each item (please read the NOTE,
+such as the current CMake note). Another option is to use the `install_script.ps1`, this command will attempt
+to recognize if a program exists or not, and install it via chocolatey if not found on the system
+(just beware I learnt powershell scripting for this only purpose at 1am in the morning):
+
+## PROGRAM LIST
+
+### PROGRAM LIST: CHOCOLATEY
 
     * git (https://community.chocolatey.org/packages/git.install)
     * mingw (https://community.chocolatey.org/packages/mingw)
@@ -79,6 +91,15 @@ Next list is a list of packages that can be installed with chocolatey:
     * GNU make (https://community.chocolatey.org/packages/make)
     * Clang and tools (https://community.chocolatey.org/packages/llvm).
     * python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)
+
+		as said, this can be installed manually. Or open a powershell, position yourself at the root
+		of this repository (where this README.md lies) and run the following commands:
+		```
+		set-executionpolicy remotesigned
+		.\install_script.ps1
+		```
+
+### PROGRAM LIST: OUT OF CHOCOLATEY
 
 * st-link tools (download windows x86_64 - doubt you have a 32bit machine- from https://github.com/stlink-org/stlink/releases/tag/v1.7.0)
 
