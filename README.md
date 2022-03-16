@@ -80,7 +80,7 @@ to recognize if a program exists or not, and install it via chocolatey if not fo
 
 ## PROGRAM LIST
 
-### PROGRAM LIST: CHOCOLATEY
+### PROGRAM LIST: CHOCOLATEY  
 
 
     * git (https://community.chocolatey.org/packages/git.install)
@@ -91,7 +91,7 @@ to recognize if a program exists or not, and install it via chocolatey if not fo
 	  	example command:  `choco install cmake --version 3.22.1 --installargs 'ADD_CMAKE_TO_PATH=System'`
     * GNU make (https://community.chocolatey.org/packages/make)
     * Clang and tools (https://community.chocolatey.org/packages/llvm).
-    * python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)
+    * python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)  
 
 
 		as said, this can be installed manually with the links. Or open a powershell, position yourself at the root
