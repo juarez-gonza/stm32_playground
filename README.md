@@ -76,11 +76,12 @@ openocd (this is very much documented as is widely used in the embedded world)
 installations can be done manually via the links provided on each item (please read the NOTE,
 such as the current CMake note). Another option is to use the `install_script.ps1`, this command will attempt
 to recognize if a program exists or not, and install it via chocolatey if not found on the system
-(just beware I learnt powershell scripting for this only purpose at 1am in the morning):
+(just beware I learnt powershell scripting for this sole purpose at 1am in the morning):
 
 ## PROGRAM LIST
 
 ### PROGRAM LIST: CHOCOLATEY
+
 
     * git (https://community.chocolatey.org/packages/git.install)
     * mingw (https://community.chocolatey.org/packages/mingw)
@@ -92,7 +93,8 @@ to recognize if a program exists or not, and install it via chocolatey if not fo
     * Clang and tools (https://community.chocolatey.org/packages/llvm).
     * python3 (3.6 or higher) (https://community.chocolatey.org/packages/python3/3.10.2)
 
-		as said, this can be installed manually. Or open a powershell, position yourself at the root
+
+		as said, this can be installed manually with the links. Or open a powershell, position yourself at the root
 		of this repository (where this README.md lies) and run the following commands:
 		```
 		set-executionpolicy remotesigned
